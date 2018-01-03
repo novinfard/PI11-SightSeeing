@@ -14,6 +14,7 @@
 		CD121EAA1FFC6BB40081329A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD121EA81FFC6BB40081329A /* Main.storyboard */; };
 		CD121EAC1FFC6BB40081329A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD121EAB1FFC6BB40081329A /* Assets.xcassets */; };
 		CD121EAF1FFC6BB40081329A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD121EAD1FFC6BB40081329A /* LaunchScreen.storyboard */; };
+		CD121EB71FFC6D2F0081329A /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD121EB61FFC6D2F0081329A /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CD121EAB1FFC6BB40081329A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD121EAE1FFC6BB40081329A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD121EB01FFC6BB40081329A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD121EB61FFC6D2F0081329A /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				CD121EA21FFC6BB40081329A /* Scene.sks */,
 				CD121EA41FFC6BB40081329A /* Scene.swift */,
 				CD121EA61FFC6BB40081329A /* ViewController.swift */,
+				CD121EB61FFC6D2F0081329A /* SwiftyJSON.swift */,
 				CD121EA81FFC6BB40081329A /* Main.storyboard */,
 				CD121EAB1FFC6BB40081329A /* Assets.xcassets */,
 				CD121EAD1FFC6BB40081329A /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 				CD121EA71FFC6BB40081329A /* ViewController.swift in Sources */,
 				CD121EA51FFC6BB40081329A /* Scene.swift in Sources */,
 				CD121EA11FFC6BB40081329A /* AppDelegate.swift in Sources */,
+				CD121EB71FFC6D2F0081329A /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
