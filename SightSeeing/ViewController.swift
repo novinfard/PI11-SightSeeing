@@ -17,6 +17,11 @@ class ViewController: UIViewController, ARSKViewDelegate, CLLocationManagerDeleg
     @IBOutlet var sceneView: ARSKView!
 	let locationManager = CLLocationManager()
 	var userLocation = CLLocation()
+	
+	var sightsJSON: JSON!
+	
+	var userHeading = 0.0
+	var headingCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +109,27 @@ class ViewController: UIViewController, ARSKViewDelegate, CLLocationManagerDeleg
 	
 	// MARK: Others
 	func fetchSights() {
+		let urlString = "https://en.wikipedia.org/w/api.php?ggscoord=\(userLocation.coordinate.latitude)%7C\(userLocation.coordinate.longitude)&action=query&prop=coordinates%7Cpageimages%7Cpageterms&colimit=50&piprop=thumbnail&pithumbsize=500&pilimit=50&wbptterms=description&generator=geosearch&ggsradius=10000&ggslimit=50&format=json"
+		guard let url = URL(string: urlString) else { return }
 		
+		if let data = try? Data(contentsOf: url) {
+			sightsJSON = JSON(data)
+			locationManager.startUpdatingHeading()
+		}
+		
+	}
+	
+	func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+		DispatchQueue.main.async {
+			self.headingCount += 1
+			if self.headingCount != 2 {return}
+			
+			self.userHeading = newHeading.magneticHeading
+			self.locationManager.startUpdatingHeading()
+			self.createSights()
+		}
+	}
+	
+	func createSights() {
 	}
 }
